@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - coin
+  - Coin
+  - Event
   layers:
   - Default
   - TransparentFX
