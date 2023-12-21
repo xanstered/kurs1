@@ -13,23 +13,24 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Rigidbody rigidbody - transform.GetComponent<rigidbody>();
+        Rigidbody rigidbody 
+            = gameObject.GetComponent<Rigidbody>();
 
         if(Input.GetKey(KeyCode.UpArrow))
         {
-            rigidbody.AddTorque(Vector3.forward);
+            rigidbody.AddTorque(Vector3.right *10f);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            Debug.Log("W dol");
+            rigidbody.AddTorque(-Vector3.right *10f);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            Debug.Log("W lewo");
+            rigidbody.AddTorque(Vector3.forward *10f);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            Debug.Log("W prawo");
+            rigidbody.AddTorque(-Vector3.forward *10f);
         }
     }
 }
